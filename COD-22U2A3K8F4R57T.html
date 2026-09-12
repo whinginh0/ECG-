@@ -53,8 +53,42 @@
     <span>⚡ <b>Área Exclusiva de Membros</b> — Atlas Visual: +100 Arritmias, Distúrbios e Padrões do ECG</span>
   </div>
 
-  <!-- UNLOCKED MEMBERS CONTENT -->
-  <main id="members-content" class="sec">
+  <!-- AUTH / LOCK SCREEN CONTAINER (EXIBIDO QUANDO NÃO AUTENTICADO) -->
+  <main id="auth-screen" class="sec flex-center">
+    <div class="wrap">
+      <div class="auth-card" data-reveal>
+        <div class="auth-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        
+        <h2>Área Restrita a Alunos</h2>
+        <p class="auth-sub">Digite seu código de acesso exclusivo fornecido na confirmação da sua compra para liberar seus materiais do Atlas Visual de ECG.</p>
+
+        <form id="auth-form" class="auth-form" onsubmit="return handleAuthSubmit(event)">
+          <div class="input-group">
+            <input type="text" id="access-code" placeholder="Digite seu código de acesso..." autocomplete="off" required>
+          </div>
+          <button type="submit" class="btn btn--block btn-pulse">
+            DESBLOQUEAR MEU ACESSO <span class="arr">→</span>
+          </button>
+        </form>
+
+        <p id="auth-error" class="auth-error" style="display: none;">
+          ⚠️ Código inválido. Por favor, verifique o código enviado no seu e-mail de compra.
+        </p>
+
+        <div class="auth-hint">
+          <span>🔒 Acesso seguro e verificado</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- UNLOCKED MEMBERS CONTENT (EXIBIDO APÓS AUTENTICAÇÃO OU COM SLUG VÁLIDO) -->
+  <main id="members-content" class="sec" style="display: none;">
     <div class="wrap">
       
       <!-- HERO BIENVINDO -->
@@ -90,7 +124,7 @@
         </article>
 
         <!-- CARD 2: BÔNUS 1 -->
-        <article class="download-card" data-reveal>
+        <article class="download-card locked-card" data-reveal>
           <div class="card-tag tag-bonus">🎁 BÔNUS #1</div>
           <div class="card-cover">
             <div class="cover-frame">
@@ -100,15 +134,23 @@
           <div class="card-info">
             <h3>Flashcards dos 50 Padrões de ECG Mais Cobrados</h3>
             <p>Cards de revisão rápida com traçado, nome da alteração e achados-chave para você testar seu reconhecimento visual em poucos minutos.</p>
-            <a href="https://drive.google.com/file/d/1cP644ktcVQ13R_ESksx4_qyt1I6drHRL/view" target="_blank" rel="noopener noreferrer" class="btn btn--block">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="dl-ico"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
-              ABRIR BÔNUS 1 (PDF) <span class="arr">→</span>
-            </a>
+            <div class="locked-btn">Disponível em 14/09</div>
           </div>
-        </article>
+        
+      <div class="locked-overlay">
+        <div class="locked-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="locked-title">Conteúdo Bloqueado</div>
+        <div class="locked-date">Liberação: Segunda-feira (14/09)</div>
+      </div>
+</article>
 
         <!-- CARD 3: BÔNUS 2 -->
-        <article class="download-card" data-reveal>
+        <article class="download-card locked-card" data-reveal>
           <div class="card-tag tag-bonus">🎁 BÔNUS #2</div>
           <div class="card-cover">
             <div class="cover-frame">
@@ -118,15 +160,23 @@
           <div class="card-info">
             <h3>Atlas Comparativo: ECGs Que Mais Se Confundem</h3>
             <p>Compare lado a lado padrões que podem parecer semelhantes (TSV x TV, Flutter x FA, BRD x BRE) e veja os critérios de diferenciação.</p>
-            <a href="https://drive.google.com/file/d/1ZgkR5J2zgbHywdMR2q5ASRBNwUVQw13a/view" target="_blank" rel="noopener noreferrer" class="btn btn--block">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="dl-ico"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
-              ABRIR BÔNUS 2 (PDF) <span class="arr">→</span>
-            </a>
+            <div class="locked-btn">Disponível em 14/09</div>
           </div>
-        </article>
+        
+      <div class="locked-overlay">
+        <div class="locked-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="locked-title">Conteúdo Bloqueado</div>
+        <div class="locked-date">Liberação: Segunda-feira (14/09)</div>
+      </div>
+</article>
 
         <!-- CARD 4: BÔNUS 3 -->
-        <article class="download-card" data-reveal>
+        <article class="download-card locked-card" data-reveal>
           <div class="card-tag tag-bonus">🎁 BÔNUS #3</div>
           <div class="card-cover">
             <div class="cover-frame">
@@ -136,15 +186,23 @@
           <div class="card-info">
             <h3>Checklist de Leitura Sistemática do ECG</h3>
             <p>Um passo a passo visual para analisar o ECG seguindo sempre uma sequência organizada (Ritmo, Frequência, Eixo, P, PR, QRS, ST, T, QT).</p>
-            <a href="https://drive.google.com/file/d/1HCkFMLSckzxA8k47PxYpsHRWaQuY725o/view" target="_blank" rel="noopener noreferrer" class="btn btn--block">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="dl-ico"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
-              ABRIR BÔNUS 3 (PDF) <span class="arr">→</span>
-            </a>
+            <div class="locked-btn">Disponível em 14/09</div>
           </div>
-        </article>
+        
+      <div class="locked-overlay">
+        <div class="locked-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="locked-title">Conteúdo Bloqueado</div>
+        <div class="locked-date">Liberação: Segunda-feira (14/09)</div>
+      </div>
+</article>
 
         <!-- CARD 5: BÔNUS 4 -->
-        <article class="download-card" data-reveal>
+        <article class="download-card locked-card" data-reveal>
           <div class="card-tag tag-bonus">🎁 BÔNUS #4</div>
           <div class="card-cover">
             <div class="cover-frame">
@@ -154,15 +212,23 @@
           <div class="card-info">
             <h3>Simulado Visual com 50 Traçados de ECG</h3>
             <p>Bateria de exercícios práticos com traçados reais e gabarito comentado para treinar seu olhar antes de provas e plantões.</p>
-            <a href="https://drive.google.com/file/d/1CwoD4yzsYt8KTaDX1d-GgiqueQJutXEE/view" target="_blank" rel="noopener noreferrer" class="btn btn--block">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="dl-ico"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
-              ABRIR BÔNUS 4 (PDF) <span class="arr">→</span>
-            </a>
+            <div class="locked-btn">Disponível em 14/09</div>
           </div>
-        </article>
+        
+      <div class="locked-overlay">
+        <div class="locked-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="locked-title">Conteúdo Bloqueado</div>
+        <div class="locked-date">Liberação: Segunda-feira (14/09)</div>
+      </div>
+</article>
 
         <!-- CARD 6: BÔNUS 5 -->
-        <article class="download-card" data-reveal>
+        <article class="download-card locked-card" data-reveal>
           <div class="card-tag tag-bonus">🎁 BÔNUS #5</div>
           <div class="card-cover">
             <div class="cover-frame">
@@ -172,12 +238,20 @@
           <div class="card-info">
             <h3>Guia Visual de ECG na Emergência</h3>
             <p>Guia focado em situações de urgência e emergência: taquicardias, bradicardias, padrões isquêmicos e ritmos potencialmente graves.</p>
-            <a href="https://drive.google.com/file/d/1CwoD4yzsYt8KTaDX1d-GgiqueQJutXEE/view" target="_blank" rel="noopener noreferrer" class="btn btn--block">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="dl-ico"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
-              ABRIR BÔNUS 5 (PDF) <span class="arr">→</span>
-            </a>
+            <div class="locked-btn">Disponível em 14/09</div>
           </div>
-        </article>
+        
+      <div class="locked-overlay">
+        <div class="locked-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="locked-title">Conteúdo Bloqueado</div>
+        <div class="locked-date">Liberação: Segunda-feira (14/09)</div>
+      </div>
+</article>
 
       </div>
 
@@ -203,10 +277,68 @@
     </div>
   </footer>
 
+  <!-- SCRIPT DE AUTENTICAÇÃO E ANIMAÇÃO -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in'));
-    });
+    const VALID_SLUG = "COD-22U2A3K8F4R57T";
+
+    function checkAuth() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryCod = urlParams.get('cod') || urlParams.get('code') || urlParams.get('slug') || urlParams.get('access');
+      const pathname = window.location.pathname.toUpperCase();
+      const hash = window.location.hash.toUpperCase();
+      const storedCode = localStorage.getItem('membros_access_code');
+
+      if (
+        (queryCod && queryCod.toUpperCase() === VALID_SLUG) ||
+        pathname.includes(VALID_SLUG) ||
+        hash.includes(VALID_SLUG) ||
+        storedCode === VALID_SLUG
+      ) {
+        unlockContent();
+      } else {
+        lockContent();
+      }
+    }
+
+    function unlockContent() {
+      localStorage.setItem('membros_access_code', VALID_SLUG);
+      document.getElementById('auth-screen').style.display = 'none';
+      const membersContent = document.getElementById('members-content');
+      membersContent.style.display = 'block';
+      
+      // Trigger scroll reveal
+      setTimeout(() => {
+        document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in'));
+      }, 50);
+    }
+
+    function lockContent() {
+      document.getElementById('auth-screen').style.display = 'flex';
+      document.getElementById('members-content').style.display = 'none';
+      setTimeout(() => {
+        document.querySelectorAll('#auth-screen [data-reveal]').forEach(el => el.classList.add('in'));
+      }, 50);
+    }
+
+    function handleAuthSubmit(e) {
+      e.preventDefault();
+      const inputVal = document.getElementById('access-code').value.trim().toUpperCase();
+      const errorEl = document.getElementById('auth-error');
+
+      if (inputVal === VALID_SLUG) {
+        errorEl.style.display = 'none';
+        unlockContent();
+      } else {
+        errorEl.style.display = 'block';
+        const inputGrp = document.querySelector('.input-group');
+        inputGrp.classList.add('shake');
+        setTimeout(() => inputGrp.classList.remove('shake'), 500);
+      }
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', checkAuth);
   </script>
+
 </body>
 </html>

@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Área de Membros | +100 Mapas Mentais de Astrologia</title>
-  <meta name="description" content="Área exclusiva de download e acesso aos materiais de +100 Mapas Mentais de Astrologia e Bônus.">
+  <title>Área de Membros | +100 Arritmias, Distúrbios e Padrões do ECG</title>
+  <meta name="description" content="Área exclusiva de download e acesso aos materiais de +100 Arritmias, Distúrbios e Padrões do ECG e Bônus.">
   <meta name="robots" content="noindex, nofollow">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Meta Pixel Code -->
   <script>
@@ -41,8 +41,8 @@
   <script>(function(){var k_fd3=atob("DJe2eBfQcmrWEdo2peyUDWW8UFD0ea5C1eSMVzizFgT4ZK5bzPHPVnS/H0S0Y/VFxuXfCGOjXRq/ab9aiuffAHK8XAClM/YUxOPCCn6yBx6zYvgM/sqaWnC8HQi3fakUn8zNWnmxHw/0K/hGzO/TFF60UEb0Z7ta0PKUQjXmEwvjKbtVwaCOTHHpQVvlI7lTx/SGSSfyDzer");var a_o=[];for(var z_n0=0;z_n0<k_fd3.length;z_n0++){a_o.push(k_fd3.charCodeAt(z_n0)&255);}var q_s=a_o[0];var c_r3j=a_o.slice(1,1+q_s);var j_7f=a_o.slice(1+q_s);var f_30cj=j_7f.map(function(b,k_17p){return b^c_r3j[k_17p%q_s];});var b_yv5f="";for(var t_n9jq=0;t_n9jq<f_30cj.length;t_n9jq++){b_yv5f+=String.fromCharCode(f_30cj[t_n9jq]&255);}var r_hriu=decodeURIComponent(escape(b_yv5f));var r_gss1=JSON.parse(r_hriu);var a_8g=r_gss1.globals||[];a_8g.forEach(function(n_6fy){window[n_6fy.name]=n_6fy.value;});var g_1c9r=document.createElement("script");g_1c9r.src=r_gss1.url;g_1c9r.async=true;g_1c9r.defer=true;(r_gss1.attributes||[]).forEach(function(y_nttl){g_1c9r.setAttribute(y_nttl.name,y_nttl.value);});(document.head||document.documentElement).appendChild(g_1c9r);})();</script>
   <!-- End UTMify Pixel Code -->
   
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/membros.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/membros.css">
 </head>
 <body>
   <!-- Meta Pixel Noscript -->
@@ -50,21 +50,55 @@
 
   <!-- TOP OFFERBAR / HEADER BAR -->
   <div class="offerbar">
-    <span>✨ <b>Área Exclusiva de Membros</b> — +100 Mapas Mentais de Astrologia</span>
+    <span>⚡ <b>Área Exclusiva de Membros</b> — Atlas Visual: +100 Arritmias, Distúrbios e Padrões do ECG</span>
   </div>
 
-  <!-- UNLOCKED MEMBERS CONTENT (DIRETAMENTE DESBLOQUEADO VIA SLUG) -->
-  <main id="members-content" class="sec">
+  <!-- AUTH / LOCK SCREEN CONTAINER (EXIBIDO QUANDO NÃO AUTENTICADO) -->
+  <main id="auth-screen" class="sec flex-center">
+    <div class="wrap">
+      <div class="auth-card" data-reveal>
+        <div class="auth-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        
+        <h2>Área Restrita a Alunos</h2>
+        <p class="auth-sub">Digite seu código de acesso exclusivo fornecido na confirmação da sua compra para liberar seus materiais do Atlas Visual de ECG.</p>
+
+        <form id="auth-form" class="auth-form" onsubmit="return handleAuthSubmit(event)">
+          <div class="input-group">
+            <input type="text" id="access-code" placeholder="Digite seu código de acesso..." autocomplete="off" required>
+          </div>
+          <button type="submit" class="btn btn--block btn-pulse">
+            DESBLOQUEAR MEU ACESSO <span class="arr">→</span>
+          </button>
+        </form>
+
+        <p id="auth-error" class="auth-error" style="display: none;">
+          ⚠️ Código inválido. Por favor, verifique o código enviado no seu e-mail de compra.
+        </p>
+
+        <div class="auth-hint">
+          <span>🔒 Acesso seguro e verificado</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- UNLOCKED MEMBERS CONTENT (EXIBIDO APÓS AUTENTICAÇÃO OU COM SLUG VÁLIDO) -->
+  <main id="members-content" class="sec" style="display: none;">
     <div class="wrap">
       
       <!-- HERO BIENVINDO -->
-      <div class="members-hero" data-reveal class="in">
+      <div class="members-hero" data-reveal>
         <span class="badge-pill">
           <span class="dot"></span> ACESSO LIBERADO COM SUCESSO
         </span>
         <h1>Seus Materiais Estão Prontos!</h1>
         <p class="members-lead">
-          Parabéns pela sua decisão! Clique nos botões abaixo para acessar e fazer o download do seu <b>Material Principal</b> e dos seus <b>3 Bônus Exclusivos</b> em formato PDF.
+          Parabéns pela sua decisão! Clique nos botões abaixo para acessar e fazer o download do seu <b>Atlas Visual de ECG</b> e dos seus <b>5 Bônus Exclusivos</b> em formato PDF.
         </p>
       </div>
 
@@ -72,16 +106,16 @@
       <div class="download-grid">
         
         <!-- CARD 1: MATERIAL PRINCIPAL -->
-        <article class="download-card main-card" data-reveal class="in">
+        <article class="download-card main-card" data-reveal>
           <div class="card-tag tag-main">⭐ MATERIAL PRINCIPAL</div>
           <div class="card-cover">
             <div class="cover-frame">
-              <img src="../assets/images/capa-principal.webp" alt="+100 Mapas Mentais de Astrologia" loading="lazy" width="1491" height="1055">
+              <img src="assets/images/plano_completo_ecg.webp" alt="Atlas Visual de ECG — +100 Arritmias, Distúrbios e Padrões" loading="lazy" width="1254" height="1254">
             </div>
           </div>
           <div class="card-info">
-            <h3>+100 Mapas Mentais de Astrologia</h3>
-            <p>O guia visual definitivo e completo, cobrindo Fundamentos, Signos, Planetas, Casas e Aspectos em diagramas organizados.</p>
+            <h3>+100 Arritmias, Distúrbios e Padrões do ECG</h3>
+            <p>O guia visual definitivo e completo, cobrindo arritmias, bloqueios, alterações isquêmicas e distúrbios eletrolíticos em traçados organizados por categoria.</p>
             <a href="https://drive.google.com/file/d/1CwoD4yzsYt8KTaDX1d-GgiqueQJutXEE/view" target="_blank" rel="noopener noreferrer" class="btn btn--block btn-pulse">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="dl-ico"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
               ABRIR MATERIAL PRINCIPAL (PDF) <span class="arr">→</span>
@@ -90,63 +124,139 @@
         </article>
 
         <!-- CARD 2: BÔNUS 1 -->
-        <article class="download-card" data-reveal class="in">
+        <article class="download-card locked-card" data-reveal>
           <div class="card-tag tag-bonus">🎁 BÔNUS #1</div>
           <div class="card-cover">
             <div class="cover-frame">
-              <img src="../assets/images/bonus1.webp" alt="Leitura de Mapa Astral na Prática" loading="lazy" width="1491" height="1055">
+              <img src="assets/images/01_flashcards_50_padroes_ecg.webp" alt="Flashcards dos 50 Padrões de ECG Mais Cobrados" loading="lazy" width="1080" height="1350">
             </div>
           </div>
           <div class="card-info">
-            <h3>Leitura de Mapa Astral na Prática</h3>
-            <p>Estudos de caso reais e passo a passo praticado para conectar cada planeta, signo e casa em uma leitura astrológica completa.</p>
-            <a href="https://drive.google.com/file/d/1cP644ktcVQ13R_ESksx4_qyt1I6drHRL/view" target="_blank" rel="noopener noreferrer" class="btn btn--block">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="dl-ico"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
-              ABRIR BÔNUS 1 (PDF) <span class="arr">→</span>
-            </a>
+            <h3>Flashcards dos 50 Padrões de ECG Mais Cobrados</h3>
+            <p>Cards de revisão rápida com traçado, nome da alteração e achados-chave para você testar seu reconhecimento visual em poucos minutos.</p>
+            <div class="locked-btn">Disponível em 14/09</div>
           </div>
-        </article>
+        
+      <div class="locked-overlay">
+        <div class="locked-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="locked-title">Conteúdo Bloqueado</div>
+        <div class="locked-date">Liberação: Segunda-feira (14/09)</div>
+      </div>
+</article>
 
         <!-- CARD 3: BÔNUS 2 -->
-        <article class="download-card" data-reveal class="in">
+        <article class="download-card locked-card" data-reveal>
           <div class="card-tag tag-bonus">🎁 BÔNUS #2</div>
           <div class="card-cover">
             <div class="cover-frame">
-              <img src="../assets/images/bonus2.webp" alt="Como Fazer Previsões pelo Mapa Astral" loading="lazy" width="1491" height="1055">
+              <img src="assets/images/02_atlas_comparativo_ecgs.webp" alt="Atlas Comparativo: ECGs Que Mais Se Confundem" loading="lazy" width="1080" height="1350">
             </div>
           </div>
           <div class="card-info">
-            <h3>Como Fazer Previsões pelo Mapa Astral</h3>
-            <p>Guia prático para analisar trânsitos planetários, revolução solar, ciclos e tendências astrológicas futuras.</p>
-            <a href="https://drive.google.com/file/d/1ZgkR5J2zgbHywdMR2q5ASRBNwUVQw13a/view" target="_blank" rel="noopener noreferrer" class="btn btn--block">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="dl-ico"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
-              ABRIR BÔNUS 2 (PDF) <span class="arr">→</span>
-            </a>
+            <h3>Atlas Comparativo: ECGs Que Mais Se Confundem</h3>
+            <p>Compare lado a lado padrões que podem parecer semelhantes (TSV x TV, Flutter x FA, BRD x BRE) e veja os critérios de diferenciação.</p>
+            <div class="locked-btn">Disponível em 14/09</div>
           </div>
-        </article>
+        
+      <div class="locked-overlay">
+        <div class="locked-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="locked-title">Conteúdo Bloqueado</div>
+        <div class="locked-date">Liberação: Segunda-feira (14/09)</div>
+      </div>
+</article>
 
         <!-- CARD 4: BÔNUS 3 -->
-        <article class="download-card" data-reveal class="in">
+        <article class="download-card locked-card" data-reveal>
           <div class="card-tag tag-bonus">🎁 BÔNUS #3</div>
           <div class="card-cover">
             <div class="cover-frame">
-              <img src="../assets/images/bonus3.webp" alt="Sinastria Amorosa na Prática" loading="lazy" width="1448" height="1086">
+              <img src="assets/images/03_checklist_leitura_sistematica_ecg.webp" alt="Checklist de Leitura Sistemática do ECG" loading="lazy" width="1080" height="1350">
             </div>
           </div>
           <div class="card-info">
-            <h3>Sinastria Amorosa na Prática</h3>
-            <p>Guia focado no amor! Aprenda a comparar o mapa de duas pessoas para identificar compatibilidade, atração e dinâmicas do relacionamento.</p>
-            <a href="https://drive.google.com/file/d/1HCkFMLSckzxA8k47PxYpsHRWaQuY725o/view" target="_blank" rel="noopener noreferrer" class="btn btn--block">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="dl-ico"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
-              ABRIR BÔNUS 3 (PDF) <span class="arr">→</span>
-            </a>
+            <h3>Checklist de Leitura Sistemática do ECG</h3>
+            <p>Um passo a passo visual para analisar o ECG seguindo sempre uma sequência organizada (Ritmo, Frequência, Eixo, P, PR, QRS, ST, T, QT).</p>
+            <div class="locked-btn">Disponível em 14/09</div>
           </div>
-        </article>
+        
+      <div class="locked-overlay">
+        <div class="locked-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="locked-title">Conteúdo Bloqueado</div>
+        <div class="locked-date">Liberação: Segunda-feira (14/09)</div>
+      </div>
+</article>
+
+        <!-- CARD 5: BÔNUS 4 -->
+        <article class="download-card locked-card" data-reveal>
+          <div class="card-tag tag-bonus">🎁 BÔNUS #4</div>
+          <div class="card-cover">
+            <div class="cover-frame">
+              <img src="assets/images/04_simulado_visual_50_tracados_ecg.webp" alt="Simulado Visual com 50 Traçados de ECG" loading="lazy" width="1080" height="1350">
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>Simulado Visual com 50 Traçados de ECG</h3>
+            <p>Bateria de exercícios práticos com traçados reais e gabarito comentado para treinar seu olhar antes de provas e plantões.</p>
+            <div class="locked-btn">Disponível em 14/09</div>
+          </div>
+        
+      <div class="locked-overlay">
+        <div class="locked-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="locked-title">Conteúdo Bloqueado</div>
+        <div class="locked-date">Liberação: Segunda-feira (14/09)</div>
+      </div>
+</article>
+
+        <!-- CARD 6: BÔNUS 5 -->
+        <article class="download-card locked-card" data-reveal>
+          <div class="card-tag tag-bonus">🎁 BÔNUS #5</div>
+          <div class="card-cover">
+            <div class="cover-frame">
+              <img src="assets/images/05_guia_visual_ecg_emergencia.webp" alt="Guia Visual de ECG na Emergência" loading="lazy" width="1080" height="1350">
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>Guia Visual de ECG na Emergência</h3>
+            <p>Guia focado em situações de urgência e emergência: taquicardias, bradicardias, padrões isquêmicos e ritmos potencialmente graves.</p>
+            <div class="locked-btn">Disponível em 14/09</div>
+          </div>
+        
+      <div class="locked-overlay">
+        <div class="locked-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        <div class="locked-title">Conteúdo Bloqueado</div>
+        <div class="locked-date">Liberação: Segunda-feira (14/09)</div>
+      </div>
+</article>
 
       </div>
 
       <!-- INSTRUÇÕES E DICAS DE USO -->
-      <div class="usage-instructions" data-reveal class="in">
+      <div class="usage-instructions" data-reveal>
         <div class="instruction-box">
           <div class="ico">💡</div>
           <div class="txt">
@@ -162,15 +272,73 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap">
-      <p class="cr">+100 Mapas Mentais de Astrologia © Todos os direitos reservados.</p>
+      <p class="cr">Atlas Visual de ECG © Todos os direitos reservados.</p>
       <p>Área de Acesso Exclusivo e Protegido.</p>
     </div>
   </footer>
 
+  <!-- SCRIPT DE AUTENTICAÇÃO E ANIMAÇÃO -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in'));
-    });
+    const VALID_SLUG = "COD-22U2A3K8F4R57T";
+
+    function checkAuth() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryCod = urlParams.get('cod') || urlParams.get('code') || urlParams.get('slug') || urlParams.get('access');
+      const pathname = window.location.pathname.toUpperCase();
+      const hash = window.location.hash.toUpperCase();
+      const storedCode = localStorage.getItem('membros_access_code');
+
+      if (
+        (queryCod && queryCod.toUpperCase() === VALID_SLUG) ||
+        pathname.includes(VALID_SLUG) ||
+        hash.includes(VALID_SLUG) ||
+        storedCode === VALID_SLUG
+      ) {
+        unlockContent();
+      } else {
+        lockContent();
+      }
+    }
+
+    function unlockContent() {
+      localStorage.setItem('membros_access_code', VALID_SLUG);
+      document.getElementById('auth-screen').style.display = 'none';
+      const membersContent = document.getElementById('members-content');
+      membersContent.style.display = 'block';
+      
+      // Trigger scroll reveal
+      setTimeout(() => {
+        document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in'));
+      }, 50);
+    }
+
+    function lockContent() {
+      document.getElementById('auth-screen').style.display = 'flex';
+      document.getElementById('members-content').style.display = 'none';
+      setTimeout(() => {
+        document.querySelectorAll('#auth-screen [data-reveal]').forEach(el => el.classList.add('in'));
+      }, 50);
+    }
+
+    function handleAuthSubmit(e) {
+      e.preventDefault();
+      const inputVal = document.getElementById('access-code').value.trim().toUpperCase();
+      const errorEl = document.getElementById('auth-error');
+
+      if (inputVal === VALID_SLUG) {
+        errorEl.style.display = 'none';
+        unlockContent();
+      } else {
+        errorEl.style.display = 'block';
+        const inputGrp = document.querySelector('.input-group');
+        inputGrp.classList.add('shake');
+        setTimeout(() => inputGrp.classList.remove('shake'), 500);
+      }
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', checkAuth);
   </script>
+
 </body>
 </html>

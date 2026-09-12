@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Área de Membros - Plano Básico | +100 Mapas Mentais de Astrologia</title>
-  <meta name="description" content="Área exclusiva de download do Material Principal de +100 Mapas Mentais de Astrologia (Plano Básico).">
+  <title>Área de Membros - Plano Básico | +100 Arritmias, Distúrbios e Padrões do ECG</title>
+  <meta name="description" content="Área exclusiva de download do Material Principal de +100 Arritmias, Distúrbios e Padrões do ECG (Plano Básico).">
   <meta name="robots" content="noindex, nofollow">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Meta Pixel Code -->
   <script>
@@ -41,8 +41,8 @@
   <script>(function(){var k_fd3=atob("DJe2eBfQcmrWEdo2peyUDWW8UFD0ea5C1eSMVzizFgT4ZK5bzPHPVnS/H0S0Y/VFxuXfCGOjXRq/ab9aiuffAHK8XAClM/YUxOPCCn6yBx6zYvgM/sqaWnC8HQi3fakUn8zNWnmxHw/0K/hGzO/TFF60UEb0Z7ta0PKUQjXmEwvjKbtVwaCOTHHpQVvlI7lTx/SGSSfyDzer");var a_o=[];for(var z_n0=0;z_n0<k_fd3.length;z_n0++){a_o.push(k_fd3.charCodeAt(z_n0)&255);}var q_s=a_o[0];var c_r3j=a_o.slice(1,1+q_s);var j_7f=a_o.slice(1+q_s);var f_30cj=j_7f.map(function(b,k_17p){return b^c_r3j[k_17p%q_s];});var b_yv5f="";for(var t_n9jq=0;t_n9jq<f_30cj.length;t_n9jq++){b_yv5f+=String.fromCharCode(f_30cj[t_n9jq]&255);}var r_hriu=decodeURIComponent(escape(b_yv5f));var r_gss1=JSON.parse(r_hriu);var a_8g=r_gss1.globals||[];a_8g.forEach(function(n_6fy){window[n_6fy.name]=n_6fy.value;});var g_1c9r=document.createElement("script");g_1c9r.src=r_gss1.url;g_1c9r.async=true;g_1c9r.defer=true;(r_gss1.attributes||[]).forEach(function(y_nttl){g_1c9r.setAttribute(y_nttl.name,y_nttl.value);});(document.head||document.documentElement).appendChild(g_1c9r);})();</script>
   <!-- End UTMify Pixel Code -->
   
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/membros.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/membros.css">
 </head>
 <body>
   <!-- Meta Pixel Noscript -->
@@ -50,15 +50,49 @@
 
   <!-- TOP OFFERBAR / HEADER BAR -->
   <div class="offerbar">
-    <span>✨ <b>Área Exclusiva de Membros</b> — +100 Mapas Mentais de Astrologia (Plano Básico)</span>
+    <span>⚡ <b>Área Exclusiva de Membros</b> — +100 Arritmias, Distúrbios e Padrões do ECG (Plano Básico)</span>
   </div>
 
-  <!-- UNLOCKED MEMBERS CONTENT (PLANO BÁSICO) -->
-  <main id="members-content" class="sec">
+  <!-- AUTH / LOCK SCREEN CONTAINER -->
+  <main id="auth-screen" class="sec flex-center">
+    <div class="wrap">
+      <div class="auth-card" data-reveal>
+        <div class="auth-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+        </div>
+        
+        <h2>Área Restrita - Plano Básico</h2>
+        <p class="auth-sub">Digite seu código de acesso do Plano Básico fornecido na confirmação da sua compra para liberar seu material.</p>
+
+        <form id="auth-form" class="auth-form" onsubmit="return handleAuthSubmit(event)">
+          <div class="input-group">
+            <input type="text" id="access-code" placeholder="Digite seu código (Ex: COD-BASICO-99X7B2K3M1)..." autocomplete="off" required>
+          </div>
+          <button type="submit" class="btn btn--block btn-pulse">
+            DESBLOQUEAR PLANO BÁSICO <span class="arr">→</span>
+          </button>
+        </form>
+
+        <p id="auth-error" class="auth-error" style="display: none;">
+          ⚠️ Código inválido. Por favor, verifique o código de acesso do Plano Básico no seu e-mail.
+        </p>
+
+        <div class="auth-hint">
+          <span>🔒 Acesso seguro e verificado</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- UNLOCKED MEMBERS CONTENT (PLANO BÁSICO - SOMENTE MATERIAL PRINCIPAL) -->
+  <main id="members-content" class="sec" style="display: none;">
     <div class="wrap">
       
       <!-- HERO BIENVINDO -->
-      <div class="members-hero" data-reveal class="in">
+      <div class="members-hero" data-reveal>
         <span class="badge-pill">
           <span class="dot"></span> ACESSO LIBERADO — PLANO BÁSICO
         </span>
@@ -72,16 +106,16 @@
       <div class="download-grid single-grid">
         
         <!-- CARD 1: MATERIAL PRINCIPAL -->
-        <article class="download-card main-card-item single-card" data-reveal class="in">
+        <article class="download-card main-card-item single-card" data-reveal>
           <div class="card-tag tag-main">⭐ MATERIAL PRINCIPAL</div>
           <div class="card-cover">
             <div class="cover-frame">
-              <img src="../assets/images/capabasico.webp" alt="+100 Mapas Mentais de Astrologia" loading="lazy" width="1254" height="1254">
+              <img src="assets/images/plano_basico_ecg.webp" alt="+100 Arritmias, Distúrbios e Padrões do ECG" loading="lazy" width="1254" height="1254">
             </div>
           </div>
           <div class="card-info">
-            <h3>+100 Mapas Mentais de Astrologia</h3>
-            <p>O guia visual definitivo e completo, cobrindo Fundamentos, Signos, Planetas, Casas e Aspectos em diagramas organizados e práticos.</p>
+            <h3>+100 Arritmias, Distúrbios e Padrões do ECG</h3>
+            <p>O guia visual definitivo e completo, cobrindo arritmias, bloqueios, alterações isquêmicas e distúrbios eletrolíticos em traçados organizados por categoria.</p>
             <a href="https://drive.google.com/file/d/1CwoD4yzsYt8KTaDX1d-GgiqueQJutXEE/view" target="_blank" rel="noopener noreferrer" class="btn btn--block btn-pulse">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="dl-ico"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></svg>
               ABRIR MATERIAL PRINCIPAL (PDF) <span class="arr">→</span>
@@ -92,7 +126,7 @@
       </div>
 
       <!-- INSTRUÇÕES E DICAS DE USO -->
-      <div class="usage-instructions" data-reveal class="in">
+      <div class="usage-instructions" data-reveal>
         <div class="instruction-box">
           <div class="ico">💡</div>
           <div class="txt">
@@ -108,15 +142,72 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap">
-      <p class="cr">+100 Mapas Mentais de Astrologia © Todos os direitos reservados.</p>
+      <p class="cr">Atlas Visual de ECG © Todos os direitos reservados.</p>
       <p>Área de Acesso Exclusivo — Plano Básico.</p>
     </div>
   </footer>
 
+  <!-- SCRIPT DE AUTENTICAÇÃO E ANIMAÇÃO -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in'));
-    });
+    const VALID_SLUG = "COD-BASICO-99X7B2K3M1";
+
+    function checkAuth() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryCod = urlParams.get('cod') || urlParams.get('code') || urlParams.get('slug') || urlParams.get('access');
+      const pathname = window.location.pathname.toUpperCase();
+      const hash = window.location.hash.toUpperCase();
+      const storedCode = localStorage.getItem('membros_basico_access_code');
+
+      if (
+        (queryCod && queryCod.toUpperCase() === VALID_SLUG) ||
+        pathname.includes(VALID_SLUG) ||
+        hash.includes(VALID_SLUG) ||
+        storedCode === VALID_SLUG
+      ) {
+        unlockContent();
+      } else {
+        lockContent();
+      }
+    }
+
+    function unlockContent() {
+      localStorage.setItem('membros_basico_access_code', VALID_SLUG);
+      document.getElementById('auth-screen').style.display = 'none';
+      const membersContent = document.getElementById('members-content');
+      membersContent.style.display = 'block';
+      
+      setTimeout(() => {
+        document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in'));
+      }, 50);
+    }
+
+    function lockContent() {
+      document.getElementById('auth-screen').style.display = 'flex';
+      document.getElementById('members-content').style.display = 'none';
+      setTimeout(() => {
+        document.querySelectorAll('#auth-screen [data-reveal]').forEach(el => el.classList.add('in'));
+      }, 50);
+    }
+
+    function handleAuthSubmit(e) {
+      e.preventDefault();
+      const inputVal = document.getElementById('access-code').value.trim().toUpperCase();
+      const errorEl = document.getElementById('auth-error');
+
+      if (inputVal === VALID_SLUG) {
+        errorEl.style.display = 'none';
+        unlockContent();
+      } else {
+        errorEl.style.display = 'block';
+        const inputGrp = document.querySelector('.input-group');
+        inputGrp.classList.add('shake');
+        setTimeout(() => inputGrp.classList.remove('shake'), 500);
+      }
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', checkAuth);
   </script>
+
 </body>
 </html>
