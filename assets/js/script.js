@@ -152,7 +152,7 @@ const CHECKOUT_COMPLETO_URL = "#checkout-completo";
   }
 
   document.addEventListener('click', function (e) {
-    var card = e.target.closest('.gal-card');
+    var card = e.target.closest('.gal-card, .photo-card');
     if (card) {
       var img = card.querySelector('img');
       if (img && img.src) {
