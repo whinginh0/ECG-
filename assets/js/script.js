@@ -129,6 +129,60 @@ const CHECKOUT_COMPLETO_URL = "#checkout-completo";
   } else {
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
+
+  /* ---------- Image Preview Modal (Lightbox) ---------- */
+  var modal = document.getElementById('imgModal');
+  var modalImg = document.getElementById('imgModalSrc');
+  var modalClose = document.getElementById('imgModalClose');
+
+  function openImageModal(src, alt) {
+    if (!modal || !modalImg) return;
+    modalImg.src = src;
+    modalImg.alt = alt || 'Imagem Ampliada';
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeImageModal() {
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest('.gal-card');
+    if (card) {
+      var img = card.querySelector('img');
+      if (img && img.src) {
+        openImageModal(img.src, img.alt);
+        return;
+      }
+    }
+
+    if (e.target.matches('.hero-img, .receive-img, .plan-img, .bonus-img, .testi-img')) {
+      openImageModal(e.target.src, e.target.alt);
+    }
+  });
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeImageModal);
+  }
+
+  if (modal) {
+    modal.addEventListener('click', function (e) {
+      if (e.target.classList.contains('img-modal-backdrop') || e.target.classList.contains('img-modal')) {
+        closeImageModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+      closeImageModal();
+    }
+  });
 })();
 
 // 4. Rastreamento e Injeção Instantânea de Parâmetros UTM no Clique dos Botões de Checkout (Lowtrack / Analytics)
